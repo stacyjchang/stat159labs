@@ -1,4 +1,3 @@
-library(testthat)
 # load the source code of the functions to be tested
 
 source("../functions/range-value.R")
@@ -58,8 +57,6 @@ test_that("missing values as expected", {
   expect_type(missing_values(s), 'integer')
 
 })
-
-test_file("tests/tests.R")
 
 
 
