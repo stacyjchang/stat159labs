@@ -78,11 +78,12 @@ R^2 = (TSS - RSS) / TSS
 
 The result that we obtain for $\hat{\beta}_0$ and $\hat{\beta}_1$ is described in the below table:
 
-\begin{tabular}{|l|r|r|r|r|} \hline
-\bf         & Estimate & Std. Error & t value & P-value  \\\hline
-(Intercept) & 7.03     & 0.46       & 15.36   & < 0.0001 \\
-TV          & 0.05     & 0.00       & 17.67   & < 0.0001 \\\hline
-\end{tabular}
+<<boring-random, results = tex>>=
+library(xtable)
+load("data/regression.RData")
+table <- xtable(sum_regression)
+print(table, comment = FALSE, type = "latex")
+@
 
 Table: Information about Regression Coefficients
 
